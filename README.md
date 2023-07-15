@@ -26,9 +26,9 @@
 
 ### Naming Convention = 02
 
-        1. Model assume that corresponding database table has a primary key column named id.
-        2. Eloquent assumes that the primary key is an incrementing integer value
-        3. If necessary, you may define a protected $primaryKey property
+1. Model assume that corresponding database table has a primary key column named id.
+2. Eloquent assumes that the primary key is an incrementing integer value
+3. If necessary, you may define a protected $primaryKey property
 
  ```bash
     class Flight extends Model{
@@ -45,9 +45,9 @@
 ```    
 ### Naming Convention = 03
 
-    1. Model expects created_at and updated_at columns exist on corresponding database table.
-    2. Eloquent will automatically set these column's values when models are created or updated.
-    3. If you do not want timestamp automatically managed by Eloquent, you should define a $timestamps property false.
+1. Model expects created_at and updated_at columns exist on corresponding database table.
+2. Eloquent will automatically set these column's values when models are created or updated.
+3. If you do not want timestamp automatically managed by Eloquent, you should define a $timestamps property false.
 
  ```bash
     class Flight extends Model{
@@ -56,8 +56,8 @@
 ```
 ### Naming Convention = 04
 
-    1. By default model instance will not contain any attribute values.
-    2. But you can define an $attributes property on your model as you want.
+1. By default model instance will not contain any attribute values.
+2. But you can define an $attributes property on your model as you want.
 
 ```bash
     class Brand extends Model{
