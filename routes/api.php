@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/create-brand', [BrandController::class, 'inserData']);
 Route::post('/create-update-brand/{brandName}', [BrandController::class, 'UpdateOrInsert']);
+Route::get('/delete-brand/{id}', [BrandController::class, 'DeleteBrand']);
 Route::post('/update-data/{id}', [CategorieController::class, 'UpdateCategoryData']);

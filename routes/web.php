@@ -15,9 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::controller(BrandController::class)->group(function () {
+    Route::get('/', 'getBrandName');
+    Route::get('/first', 'firstData');
+    Route::get('/findData', 'findData');
+    Route::post('/create-brand', 'inserData');
 });
 
-Route::post('/create-brand', [BrandController::class, 'inserData']);
-Route::post('/update-data/{id}', [CategorieController::class, 'UpdateCategoryData']);
+Route::controller(CategorieController::class)->group(function () {
+    Route::post('/update-data/{id}', 'UpdateCategoryData');
+});

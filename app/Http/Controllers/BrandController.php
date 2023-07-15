@@ -17,4 +17,19 @@ class BrandController extends Controller {
             $request->input()
         );
     }
+
+    public function DeleteBrand(Request $request) {
+        return Brand::where('id', '=', $request->id)->Delete();
+
+    }
+
+    public function getBrandName(Request $request) {
+        return Brand::get();
+    }
+    public function firstData(Request $request) {
+        return Brand::first();
+    }
+    public function findData(Request $request) {
+        return Brand::find(3);
+    }
 }
