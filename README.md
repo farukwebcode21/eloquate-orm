@@ -2,20 +2,21 @@
 
 ### Laravel Module-18
 
-     --  Meet Eloquent ORM
+### --  Meet Eloquent ORM
    
-        1. Eloquent is an object-relational mapper (ORM)
-        2. Eloquent models represent database tables.
-        3. Models can be used to perform operations on data
-        4. Eloquent also supports relationships between models
-        5. It provides layer between application and database
+1. Eloquent is an object-relational mapper (ORM)
+2. Eloquent models represent database tables.
+3. Models can be used to perform operations on data
+4. Eloquent also supports relationships between models
+5. It provides layer between application and database
    
 
 ### Naming Convention = 01
 
-        1. Table name: brands Model name: Brand
-        2. Table name: product_details Model name: ProductDetails
-        3. If we follow this convention no need to define table name inside model. Other wise we need to define.
+ 1. Table name: brands Model name: Brand
+ 2. Table name: product_details Model name: ProductDetails
+ 3. If we follow this convention no need to define table name inside model. Other wise we need to define.
+
 
     ```bash
     class Flight extends Model{
