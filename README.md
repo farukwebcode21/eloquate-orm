@@ -15,11 +15,8 @@
    - There are a few reasons why you might want to use the fillable property in Laravel
 
 1. <span style="color:orange;">Security</span>: It helps protect your application from mass assignment attacks.
-2. ```diff
-    -text in green
-    Performance: It can improve the performance of your application by reducing the number of fields that need to be checked when mass assigning data.
-```
-3. Readability: It makes your code more readable by explicitly defining which fields can be mass assigned.
+2. Performance: It can improve the performance of your application by reducing the number of fields that need to be checked when mass assigning data.
+3. [#1589F0] (Readability: It makes your code more readable by explicitly defining which fields can be mass assigned.)
 4. Consistency: It ensures that all of your models have the same set of fillable fields, which can make your code more consistent.
 5. Extensibility: It allows you to easily add or remove fillable fields as your application evolves.
    
