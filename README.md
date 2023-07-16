@@ -9,6 +9,16 @@
 3. Models can be used to perform operations on data
 4. Eloquent also supports relationships between models
 5. It provides layer between application and database
+
+
+### Why we write fillable inside model
+   - There are a few reasons why you might want to use the fillable property in Laravel
+
+1. <red>Security</red>: It helps protect your application from mass assignment attacks.
+2. Performance: It can improve the performance of your application by reducing the number of fields that need to be checked when mass assigning data.
+3. Readability: It makes your code more readable by explicitly defining which fields can be mass assigned.
+4. Consistency: It ensures that all of your models have the same set of fillable fields, which can make your code more consistent.
+5. Extensibility: It allows you to easily add or remove fillable fields as your application evolves.
    
 
 ### Naming Convention = 01
