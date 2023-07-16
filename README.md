@@ -14,9 +14,9 @@
 ### Why we write fillable inside model
    - There are a few reasons why you might want to use the fillable property in Laravel
 
-1. <span style="color:orange;">Security</span>: It helps protect your application from mass assignment attacks.
+1. Security: It helps protect your application from mass assignment attacks.
 2. Performance: It can improve the performance of your application by reducing the number of fields that need to be checked when mass assigning data.
-3. [#1589F0] (Readability: It makes your code more readable by explicitly defining which fields can be mass assigned.)
+3. Readability: It makes your code more readable by explicitly defining which fields can be mass assigned.
 4. Consistency: It ensures that all of your models have the same set of fillable fields, which can make your code more consistent.
 5. Extensibility: It allows you to easily add or remove fillable fields as your application evolves.
    
@@ -121,3 +121,43 @@
     }
 
 ```
+
+### Paginate
+
+Display simple "Next" and "Previous"
+links in your application's UI, use the
+simplePaginate method to perform a
+single, efficient query
+
+```bash
+    public function DemoAction(){
+        return Product::simplePaginate(2)
+    }
+```
+```bash
+    public function DemoAction(){
+        return Product::paginate(2)
+    }
+```
+```bash
+    public function DemoAction(){
+        return Product::paginate(
+            $perPage  = 5,
+            $columns  = ['*'],
+            $pageName = 'pageName'
+        );
+    }
+```
+### Understanding Eloquent Relationship Term
+
+- Has Relationship:
+1. It indicates that one model "has" one or more related models.
+2. The model that defines the relationship has the foreign key column. This means that the model that defines the relationship is the "parent" model, and the model that is related to it is the "child" model.
+
+- Belongs Relationship:
+1. The "belongs" relationship, also known as the "inverse" relationship, defines the inverse of a "has" relationship
+2. This means that the model that is related to the other model is the "parent" model, and the model that defines the
+relationship is the "child" model
+![eloquate-relation](./eloquate-relation.png)
+
+
