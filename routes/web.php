@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,11 @@ Route::controller(BrandController::class)->group(function () {
     Route::get('/first', 'firstData');
     Route::get('/findData', 'findData');
     Route::post('/create-brand', 'inserData');
+});
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/produt-title', 'ProductTitle');
+    Route::get('/uniqueData', 'UniquePrice');
 });
 
 Route::controller(CategorieController::class)->group(function () {

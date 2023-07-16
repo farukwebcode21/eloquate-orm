@@ -32,4 +32,8 @@ class BrandController extends Controller {
     public function findData(Request $request) {
         return Brand::find(3);
     }
+    public function fineTitle(Request $request) {
+
+    }
+
 }

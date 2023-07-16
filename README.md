@@ -1,8 +1,8 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-### Laravel Module-18
+### Laravel Module - 18
 
-### --  Meet Eloquent ORM
+#### Meet Eloquent ORM
    
 1. Eloquent is an object-relational mapper (ORM)
 2. Eloquent models represent database tables.
@@ -18,12 +18,12 @@
  3. If we follow this convention no need to define table name inside model. Other wise we need to define.
 
 
-    ```bash
+```bash
     class Flight extends Model{
         protected $table = 'my_flights';
     }
         
-    ```
+```
 
 ### Naming Convention = 02
 
@@ -37,12 +37,16 @@
     }     
 ```      
 
- ```bash
-    public $incrementing = false;    
+```bash
+
+    public $incrementing = false;   
+
 ```    
 
- ```bash
-    protected $keyType = 'string';     
+```bash
+
+    protected $keyType = 'string'; 
+
 ```    
 ### Naming Convention = 03
 
@@ -50,7 +54,7 @@
 2. Eloquent will automatically set these column's values when models are created or updated.
 3. If you do not want timestamp automatically managed by Eloquent, you should define a $timestamps property false.
 
- ```bash
+```bash
     class Flight extends Model{
         protected $timestamps = false;
     } 
@@ -63,8 +67,47 @@
 ```bash
     class Brand extends Model{
         protected $attributes =[
-            "brandName" => "default name',
-            "brandImg" => 'default img',
+            "brandName" => 'default name',
+            "brandImg"  => 'default img',
         ]
     }
+
+```
+### Retrieving All Rows
+
+```bash
+    public function getBrandName(Request $request) {
+        return Brand::get();
+    }
+     public function getBrandName(Request $request) {
+        return Brand::all();
+    }
+
+```
+### Retrieving Single  Rows
+
+
+```bash
+
+    public function firstData(Request $request) {
+        return Brand::first();
+    }
+    public function findData(Request $request) {
+        return Brand::find(3);
+    }
+
+```
+### Select Clause 
+1. The select() method allows you to specify the columns
+2. To return distinct results use the distinct() method
+
+
+```bash
+    public function ProductTitle(Request $request) {
+        return Product::select('title', 'price', 'discount_price')->get();
+    }
+    function UniquePrice(Request $request) {
+        return Product::select('price')->distinct()->get();
+    }
+
 ```
