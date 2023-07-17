@@ -158,6 +158,8 @@ single, efficient query
 1. The "belongs" relationship, also known as the "inverse" relationship, defines the inverse of a "has" relationship
 2. This means that the model that is related to the other model is the "parent" model, and the model that defines the
 relationship is the "child" model
-![eloquate-relation](./eloquate-relation.png)
+
+
+![eloquate-relation](./working_table.png)
 
 
